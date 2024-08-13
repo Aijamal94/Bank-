@@ -340,7 +340,7 @@ class OrderCardTest {
     public void shouldNotOrderCardIfPhoneIsWrong() {
 
         WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Иван Иванов");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("79533333333");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
